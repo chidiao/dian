@@ -1,3 +1,18 @@
-.test {
-  color: red;
+.icon-visa1 {
+  background-image: url('/dist/assets/svg/visa1.svg');
+}
+.icon-visa2 {
+  background-image: url('/dist/assets/svg/visa2.svg');
+}
+.icon-visa3 {
+  background-image: url('/dist/assets/svg/visa3.svg');
+}
+.icon-visa4 {
+  background-image: url('/dist/assets/svg/visa4.svg');
+}
+.icon-visa5 {
+  background-image: url('/dist/assets/svg/visa5.svg');
+}
+.icon-visa6 {
+  background-image: url('/dist/assets/svg/visa6.svg');
 }
