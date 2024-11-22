@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>plan-student</title>
+    @@include('./components/head.html')
+  </head>
+
+  <body class="font-sans">
+    @@include('./components/header.html')
+
+    <!-- app -->
+    <div id="app">
+      <div class="w-full bg-white">
+        <div class="container mx-auto px-5 pt-5">
+          <div class="text-center space-y-2 lg:space-y-5 py-5">
+            <h1 class="text-2xl lg:text-4xl font-bold text-slate-900">国际学生 保险计划</h1>
+            <h2 class="text-lg text-slate-700">留学无忧，保险相伴 —— 为您的国际教育之旅保驾护航。</h2>
+          </div>
+
+          <div class="grid md:grid-cols-3 mt-5 lg:mt-8">
+            <div
+              v-for="i in 3"
+              class="card p-5 rounded-t-3xl text-sm text-slate-900 hover:text-white hover:bg-blue-600 transition-all duration-300 cursor-pointer"
+            >
+              <div class="p-5">
+                <p class="text-4xl font-bold">$66.9</p>
+              </div>
+
+              <div class="space-y-1">
+                <p class="plan-check">终身累计最高保额: Unlimited</p>
+                <p class="plan-check">年度最高保额: Unlimited</p>
+                <p class="plan-check">每次受伤或生病最高保额: $500,000</p>
+                <p class="plan-check">网络内共同保险: 80%</p>
+                <p class="plan-check">网络外共同保险: 60%</p>
+                <p class="plan-check">学生健康中心免赔额: $0</p>
+                <p class="plan-check">网络内免赔额: $500</p>
+                <p class="plan-check">网络外免赔额: $750</p>
+                <p class="plan-check">网络内自付上限: $5,000</p>
+                <p class="plan-check">急诊室自付额 (若被纳入住院将免除): $250</p>
+                <p class="plan-check">学生健康中心自付额: $15</p>
+                <p class="plan-check">专科医生共付额: $30</p>
+                <p class="plan-check">住院治疗共付额: $250</p>
+                <p class="plan-check">原有疾病状况等待期: 6 months</p>
+                <p class="plan-check">预防保健: 100% up to $500</p>
+                <p class="plan-check">医疗运送: 100%</p>
+                <p class="plan-check">遗体送返: 100%</p>
+              </div>
+
+              <div class="md:h-8 lg:h-16"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    @@include('./components/footer.html') @@include('./components/script.html')
+    <script>
+      const { createApp } = Vue
+      createApp({
+        data() {
+          return {
+            selectedId: 2
+          }
+        }
+      }).mount('#app')
+    </script>
+  </body>
+</html>

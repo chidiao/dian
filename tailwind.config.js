@@ -1,8 +1,7 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
-const { addIconSelectors } = require('@iconify/tailwind')
 
 module.exports = {
-  content: ['./dist/**/*.{html,js}'],
+  content: ['./src/**/*.{html,js}'],
   theme: {
     extend: {
       fontFamily: {
@@ -10,5 +9,4 @@ module.exports = {
       }
     }
   }
-  // plugins: [addIconSelectors(['feather', 'heroicons'])]
 }

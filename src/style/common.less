@@ -37,3 +37,31 @@
 .icon-fe4 {
   background-image: url('../assets//svg/fe4.svg');
 }
+
+.plan-check {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  gap: 6px;
+}
+
+.plan-check:before {
+  --size: 20px;
+
+  content: '';
+  position: relative;
+  left: 0;
+  top: 0;
+  flex-shrink: 0;
+  width: var(--size);
+  height: var(--size);
+  background: url('../assets/svg/check.svg') no-repeat;
+  background-size: 100% 100%;
+  transition: all 0.3s;
+}
+
+.card:hover .plan-check:before {
+  background-image: url('../assets/svg/check-white.svg');
+}
