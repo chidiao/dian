@@ -11,46 +11,102 @@
     @@include('./components/header.html')
 
     <div id="app">
-      <div class="container mx-auto p-5">
+      <div class="max-w-7xl mx-auto p-5">
         <div class="w-full rounded-xl overflow-hidden">
           <img src="./assets/img/bg1.jpg" class="w-full object-contain" />
         </div>
       </div>
 
-      <div class="container mx-auto p-4">
-        <!-- 签证 -->
-        <div>
-          <div class="text-center *:my-2 md:*:my-4 lg:*:my-6">
-            <h2 class="text-2xl md:text-4xl font-bold">Guaranteed, Affordable, Preferred</h2>
-            <h3 class="text-lg md:text-xl text-black/60">Fast access to your best plan</h3>
+      <!-- plan -->
+      <div class="max-w-5xl mx-auto p-5">
+        <h2 class="text-2xl md:text-4xl font-bold text-center py-5 my-8 md:my-16">选择最适合你的健康计划</h2>
+
+        <div class="grid gap-5 lg:gap-8 lg:grid-cols-2">
+          <div
+            class="rounded-xl shadow shadow-[#92d3d9] bg-[#92d3d9] p-5 grid md:grid-cols-2 gap-5 md:gap-8 lg:gap-16 py-5 justify-items-end items-center lg:col-span-2 cursor-pointer"
+          >
+            <div class="p-5 lg:p-8">
+              <p class="text-blue-950 text-xl">How to choose best plan</p>
+              <p class="mt-2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste quibusdam temporibus perferendis nisi
+                ipsum, consequatur consectetur ut asperiores et perspiciatis molestiae ducimus expedita exercitationem
+                cumque sed quas quidem provident corrupti!
+              </p>
+            </div>
+
+            <div class="p-5 flex justify-end -mt-8">
+              <img
+                src="https://www.dianins.com/files/pageBlockImage/How_to_choose_best_plan.jpg"
+                class="w-1/3 md:w-full object-contain"
+              />
+            </div>
           </div>
 
-          <div class="grid gap-5 lg:gap-6 md:grid-cols-2 lg:grid-cols-3 mt-5">
-            <div
-              v-for="(i,k) in visaList"
-              class="group rounded-lg border p-5 shadow border-blue-100 hover:border-blue-500 transition-all duration-300 cursor-pointer hover:-translate-y-1"
-            >
-              <div class="flex items-center gap-4">
-                <p class="size-12 rounded-lg bg-contain bg-blue-50 shrink-0" :class="[`icon-visa${k+1}`]"></p>
-                <p class="text-lg font-bold text-black/70">{{i.title}}</p>
-              </div>
+          <div
+            class="rounded-xl shadow shadow-[#79b3c7] bg-[#79b3c7] p-5 grid gap-5 md:gap-8 lg:gap-16 py-5 justify-items-end items-center cursor-pointer"
+          >
+            <div class="p-5 lg:p-8 pb-0 lg:pb-0">
+              <p class="text-blue-950 text-xl">General claim information</p>
+              <p class="mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
 
-              <p class="text-black/40 py-5 min-h-32">
-                Our plans start from just 30% of the cost of a comparable University health insurance plan
-              </p>
+            <div class="p-5 flex justify-end -mt-8">
+              <img src="https://www.dianins.com/files/pageBlockImage/claim.jpg" class="w-1/3 object-contain" />
+            </div>
+          </div>
 
-              <a :href="i.link">
-                <div
-                  class="w-full bg-blue-500 text-white text-center rounded-full py-3 font-bold group-hover:bg-blue-600 transition-all duration-300"
-                >
-                  Learn More
-                </div>
-              </a>
+          <div
+            class="rounded-xl shadow shadow-[#caf5fe] bg-[#caf5fe] p-5 grid gap-5 md:gap-8 lg:gap-16 py-5 justify-items-end items-center cursor-pointer"
+          >
+            <div class="p-5 lg:p-8 pb-0 lg:pb-0">
+              <p class="text-blue-950 text-xl">How to apply for Waiver</p>
+              <p class="mt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+
+            <div class="p-5 flex justify-end -mt-8">
+              <img
+                src="https://www.dianins.com/files/pageBlockImage/How_to_apply_waiver.jpg"
+                class="w-1/3 object-contain"
+              />
             </div>
           </div>
         </div>
+      </div>
 
-        <!-- 特色 -->
+      <!-- 签证 -->
+      <div class="max-w-7xl mx-auto p-5">
+        <div class="text-center space-y-5 my-5 md:my-8 lg:my-16">
+          <h2 class="text-2xl md:text-4xl font-bold">Guaranteed, Affordable, Preferred</h2>
+          <h3 class="text-lg md:text-xl text-black/60">Fast access to your best plan</h3>
+        </div>
+
+        <div class="grid gap-5 lg:gap-6 md:grid-cols-2 lg:grid-cols-3 mt-5">
+          <div
+            v-for="(i,k) in visaList"
+            class="group rounded-lg border p-5 shadow border-gray-100 hover:border-blue-500 transition-all duration-300 cursor-pointer hover:-translate-y-1"
+          >
+            <div class="flex items-center gap-4">
+              <p class="size-12 rounded-lg bg-contain bg-blue-50 shrink-0" :class="[`icon-visa${k+1}`]"></p>
+              <p class="text-lg font-bold text-black/70">{{i.title}}</p>
+            </div>
+
+            <p class="text-black/40 py-5 min-h-32">
+              Our plans start from just 30% of the cost of a comparable University health insurance plan
+            </p>
+
+            <a :href="i.link">
+              <div
+                class="w-full bg-blue-500 text-white text-center rounded py-3 font-bold group-hover:bg-blue-600 transition-all duration-300"
+              >
+                Learn More
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 特色 -->
+      <div class="max-w-5xl mx-auto p-5">
         <h2 class="text-2xl md:text-4xl font-bold text-center py-5 mt-8 md:pt-16">特色与竞争力</h2>
         <div class="grid gap-8 md:gap-16 md:grid-cols-2 mx-auto max-w-screen-lg my-5 md:my-8 lg:my-16">
           <div v-for="(i,k) in featureList" class="flex items-start gap-8 cursor-pointer">
@@ -63,6 +119,24 @@
               <p class="text-black text-xl font-bold">{{i.title}}</p>
               <p class="text-[#929292] text-sm font-semibold">{{i.desc}}</p>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 成就 -->
+      <div class="max-w-5xl mx-auto p-5">
+        <h2 class="text-2xl md:text-4xl font-bold text-center py-5 my-8 md:py-16">公司成就</h2>
+        <div class="grid gap-5 lg:gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div
+            v-for="i in achievements"
+            class="border h-96 rounded-xl p-5 grid relative bg-blue-100 group cursor-pointer"
+          >
+            <p class="text-blue-950 text-xl">{{i.title}}</p>
+            <p class="text-blue-600">
+              <span class="text-7xl font-semibold">{{i.number}}</span>
+              <span class="text-sm font-semibold ml-2">{{i.unit}}</span>
+            </p>
+            <p class="text-blue-950">{{i.description}}</p>
           </div>
         </div>
       </div>
@@ -110,12 +184,51 @@
           desc: '预防保健、医疗运送、24/7客户服务和多语言支持，为国际客户提供全方位保障。'
         }
       ]
+      const achievements = [
+        {
+          title: '服务全球客户',
+          number: 50,
+          unit: '个国家/地区',
+          description: '我们为全球客户提供优质保险服务，打造无忧生活。'
+        },
+        {
+          title: '客户满意度领先',
+          number: 98,
+          unit: '%',
+          description: '根据第三方调查，客户对我们的服务给予了高度评价。'
+        },
+        {
+          title: '快速赔付保障',
+          number: 100,
+          unit: '亿人民币',
+          description: '我们的理赔流程高效便捷，快速响应客户需求。'
+        },
+        {
+          title: '百万客户信赖',
+          number: 200,
+          unit: '万客户',
+          description: '成为百万客户的安心之选。'
+        },
+        {
+          title: '深耕保险行业',
+          number: 30,
+          unit: '年',
+          description: '作为行业先锋，我们始终以客户为中心。'
+        },
+        {
+          title: '数字化保险领跑者',
+          number: 85,
+          unit: '%',
+          description: '通过创新科技，提供便捷的一站式服务。'
+        }
+      ]
 
       createApp({
         data() {
           return {
             visaList,
-            featureList
+            featureList,
+            achievements
           }
         }
       }).mount('#app')

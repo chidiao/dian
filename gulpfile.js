@@ -4,7 +4,7 @@ const postcss = require('gulp-postcss')
 
 gulp.task('html', function () {
   return gulp
-    .src('src/*.html')
+    .src('src/**/*.html')
     .pipe(
       fileInclude({
         prefix: '@@',
@@ -27,7 +27,7 @@ gulp.task('css', function () {
 })
 
 gulp.task('watch', function () {
-  gulp.watch('src/*.html', gulp.series('html', 'css'))
+  gulp.watch('src/**/*.html', gulp.series('html', 'css'))
   gulp.watch('src/assets/**/*', gulp.series('assets'))
   gulp.watch('src/js/**/*', gulp.series('js'))
   gulp.watch('src/style/**/*.css', gulp.series('css'))
